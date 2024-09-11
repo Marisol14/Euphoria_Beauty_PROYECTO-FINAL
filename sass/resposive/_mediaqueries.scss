@@ -1,0 +1,176 @@
+//HEADER
+
+.nav-bar{
+    @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100px;
+        right: 0;
+        background-color: #000000;
+        width: 100%;
+        text-align: right;
+
+        ul {
+            flex-direction: column;
+            margin: 0;
+
+            li {
+                margin: 10px 0;
+                a {
+                    padding: 15px 20px;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-toggle-checkbox:checked ~ .nav-links {
+        display: block;
+    }
+}
+}
+
+//MAIN-HOME
+
+@media (max-width: 768px) {
+    .main-home .container-home {
+        padding: 20px;
+        margin: 40px auto;
+    }
+
+    .main-home .section-home {
+        padding: 15px;
+    }
+
+    .main-home .article-home {
+        font-size: 1rem;
+    }
+
+    .carousel-inner .carousel-item img {
+        height: 40vh; 
+    }
+
+    .carousel-caption h5 {
+        font-size: 18px; 
+    }
+
+    .carousel-caption p {
+        font-size: 14px; 
+    }
+}
+
+@media (min-width: 1024px) {
+    .carousel-inner .carousel-item img {
+        height: 80vh; 
+    }
+}
+
+//MAIN-LABIOS
+
+@media (max-width: 768px) {
+    .main-labios .container-labios {
+        padding: 20px;
+    }
+
+    .main-labios .productos-labios {
+        grid-template-columns: 1fr;
+    }
+
+    .main-labios .card-texts .cta {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-labios .card-texts .title {
+        font-size: 1.2rem;
+    }
+
+    .main-labios .card-texts .paragraph {
+        font-size: 0.9rem;
+    }
+}
+
+
+//MAIN-OJOS
+
+@media (max-width: 768px) {
+    .main-ojos .container-ojos {
+        padding: 20px;
+    }
+
+    .main-ojos .productos-ojos {
+        grid-template-columns: 1fr;
+    }
+
+    .main-ojos .card-texts .cta {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-ojos .card-texts .title {
+        font-size: 1.2rem;
+    }
+
+    .main-ojos .card-texts .paragraph {
+        font-size: 0.9rem;
+    }
+}
+
+//MAIN-ROSTRO
+
+@media (max-width: 768px) {
+    .main-rostro .container-rostro {
+        padding: 20px;
+    }
+
+    .main-rostro .productos-rostro {
+        grid-template-columns: 1fr;
+    }
+
+    .main-rostro .card-texts .cta {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-rostro .card-texts .title {
+        font-size: 1.2rem;
+    }
+
+    .main-rostro .card-texts .paragraph {
+        font-size: 0.9rem;
+    }
+}
+
+//MAIN-CONTACTO
+
+@media (max-width: 768px) {
+    .main-contacto form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-contacto form legend {
+        font-size: 1.2em;
+    }
+
+    .main-contacto form input[type="text"],
+    .main-contacto form input[type="email"],
+    .main-contacto form textarea {
+        font-size: 0.9em;
+    }
+}
+
+
+
+
+
+

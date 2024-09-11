@@ -1,0 +1,101 @@
+.main-home {
+    background-color: $background-color; 
+    min-height: 100vh;
+    color: $text-color;
+    @include flex-center;
+    flex-direction: column;
+    padding: $padding-default;
+    background-image: url('../assets/fondoinicio.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center center;
+
+    .container-home {
+        background-image: url('../assets/inicio.jpg');
+        background-position: center center;
+        background-size: cover;
+        text-align: justify;
+        color: $white-color;
+        padding: 40px;
+        width: 90%;
+        max-width: 1200px;
+        height: 400px;
+        @include border-radius($border-radius);
+        @include box-shadow($box-shadow);
+        margin-bottom: 10px;
+    }
+
+    .section-home {
+        margin-top: 20px;
+        text-align: center;
+        padding: 20px;
+        background-color: rgba(255, 255, 255, 0.8); 
+        @include border-radius($border-radius);
+        max-width: 800px;
+        width: 100%;
+    }
+
+    .article-home {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        color: map-get($color-map, text);
+        line-height: 2;
+    }
+}
+
+.carousel-inner {
+    height: 800px;
+    @include border-radius($border-radius); 
+    overflow: hidden; 
+    @include box-shadow($box-shadow);
+    margin-top: 40px;
+
+    .carousel-item {
+        img {
+            object-fit: cover; 
+            height: 60vh; 
+            width: 100%;
+        }
+    }
+
+    .carousel-caption {
+        background-color: rgba(0, 0, 0, 0.6); 
+        padding: 15px;
+        @include border-radius(5px);
+        bottom: 20%; 
+        transform: translateY(0); 
+        text-align: center;
+
+        h5 {
+            font-size: 24px; 
+            font-weight: bold;
+            color: $white-color;
+        }
+
+        p {
+            font-size: 16px; 
+            color: #ccc;
+        }
+
+        a.btn {
+            background-color: $primary-color;
+            color: $white-color;
+            padding: 10px 20px;
+            @include border-radius(5px);
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            margin-top: 10px;
+
+            &:hover {
+                background-color: map-get($color-map, secondary);
+            }
+        }
+    }
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); 
+    @include border-radius(50%); 
+    padding: 10px;
+}

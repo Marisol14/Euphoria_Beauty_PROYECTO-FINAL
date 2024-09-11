@@ -1,0 +1,22 @@
+// Mapas de colores
+$color-map: (
+  primary: $primary-color,
+  secondary: $secondary-color,
+  background: $background-color,
+  text: $text-color,
+  white: $white-color,
+);
+
+// Mapas de fuentes
+$font-size-map: (
+  base: $font-size-base,
+  large: $font-size-large,
+  small: $font-size-small,
+);
+
+// Mapas de sombras
+$box-shadow-map: (
+  default: $box-shadow,
+  card: $card-box-shadow,
+);
+

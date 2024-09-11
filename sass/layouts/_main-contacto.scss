@@ -1,0 +1,93 @@
+.main-contacto {
+    padding: $padding-default;
+    background-image: url(../assets/form.png);
+    background-size: cover; 
+    background-position: center;
+    min-height: 100vh;
+    color: $text-color;
+    @include flex-center;
+    flex-direction: column;
+
+    section {
+        margin-bottom: 40px;
+        background-color: rgba(255, 248, 252, 0.5); 
+        padding: 30px;
+        @include border-radius($border-radius);
+    }
+
+    /*FORMULARIO DE CONTACTO*/
+    form {
+        background-color: $white-color;
+        margin: auto;
+        padding: 30px;
+        @include border-radius($border-radius);
+        @include box-shadow($box-shadow);
+        width: 90%;
+        max-width: 400px;
+
+        fieldset {
+            border: none;
+        }
+
+        legend {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            font-weight: $font-weight-bold;
+            color: $primary-color;
+            text-align: center;
+        }
+
+        div {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: $font-weight-bold;
+            color: $primary-color;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            @include border-radius(5px);
+            font-size: 1em;
+            color: #333;
+            resize: none;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: $primary-color; 
+            border: none;
+            @include border-radius(5px);
+            font-size: 1em;
+            color: $white-color;
+            font-weight: $font-weight-bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: rgb(245, 158, 172);
+            }
+        }
+    }
+
+    p {
+        line-height: 5; 
+    }
+
+    ul {
+        padding-left: 20px;
+        font-weight: lighter; 
+
+        li {
+            margin-bottom: 10px; 
+        }
+    }
+}

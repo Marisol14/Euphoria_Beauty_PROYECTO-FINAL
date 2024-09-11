@@ -1,0 +1,255 @@
+// Estilos generales para las páginas principales (Labios, Ojos, Rostro)
+.main-labios, .main-ojos, .main-rostro {
+    padding: $padding-default;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    color: $text-color;
+    @include flex-center;
+    flex-direction: column;
+  
+    // Background específico para cada sección
+    &.main-labios {
+      background-image: url(../assets/labios.jpg.png);
+    }
+  
+    &.main-ojos {
+      background-image: url(../assets/ojos.png);
+    }
+  
+    &.main-rostro {
+      background-image: url(../assets/rostro.png);
+    }
+  
+    // Contenedor principal para cada sección
+    .container-labios, .container-ojos, .container-rostro {
+      text-align: center;
+      color: $white-color;
+      padding: 40px;
+      width: 100%;
+      max-width: 1200px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: rgba(0, 0, 0, 0.5); // Fondo semitransparente homogéneo
+      @include border-radius($border-radius);
+      @include box-shadow($box-shadow);
+    }
+  
+    // Secciones de contenido de texto
+    section {
+      margin-bottom: 40px;
+      background-color: rgba(255, 248, 252, 0.5);
+      padding: 30px;
+      @include border-radius($border-radius);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        background-color: rgba(255, 248, 252, 0.8);
+        box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+      }
+  
+      ul {
+        list-style-position: inside;
+        text-align: left;
+        font-size: 1.2rem;
+        line-height: 1.8;
+        color: $primary-color;
+        animation: fadeInUp 1s ease both;
+      }
+    }
+  
+    // Tarjetas de productos
+    .productos-labios, .productos-ojos, .productos-rostro {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      animation: fadeIn 1s ease both;
+    }
+  
+    .card {
+      background-color: $white-color;
+      @include box-shadow($card-box-shadow);
+      @include border-radius($border-radius);
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-10px) scale(1.05);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+      }
+  
+      .galeria {
+        position: relative;
+        overflow: hidden;
+  
+        img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.5s ease;
+  
+          &:hover {
+            transform: scale(1.1) rotate(3deg); // Efecto de zoom y rotación uniforme
+          }
+        }
+      }
+  
+      .card-texts {
+        padding: 20px;
+        text-align: center;
+  
+        .title {
+          font-size: 1.6rem;
+          font-weight: bold;
+          margin-bottom: 15px;
+          color: $primary-color;
+          letter-spacing: 1px;
+        }
+  
+        .paragraph {
+          margin-bottom: 20px;
+          font-size: 1.1rem;
+          line-height: 1.6;
+          color: #555;
+        }
+  
+        .cta {
+          display: block;
+          width: 100%;
+          max-width: 300px;
+          margin: 0 auto;
+          background: $primary-color;
+          color: $white-color;
+          padding: 15px;
+          @include border-radius(6px);
+          text-align: center;
+          text-decoration: none;
+          transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  
+          &:hover {
+            background: $secondary-color;
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+          }
+        }
+      }
+    }
+  }
+  
+  // Animaciones generales para las tres secciones
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  // Detalles de producto
+  .producto-detalle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    padding: 2rem;
+  
+    // Fondo específico según la categoría
+    &.labios-detalle {
+      background-image: url(../assets/labios.jpg.png); // Fondo de Labios
+    }
+  
+    &.ojos-detalle {
+      background-image: url(../assets/ojos.png); // Fondo de Ojos
+    }
+  
+    &.rostro-detalle {
+      background-image: url(../assets/rostro.png); // Fondo de Rostro
+    }
+  
+    .producto-info {
+      background: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      max-width: 400px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      }
+  
+      h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: $primary-color;
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeInDown 1s ease both;
+      }
+  
+      img {
+        max-width: 100%;
+        border-radius: 10px;
+        margin-bottom: 1.5rem;
+        transition: transform 0.5s ease;
+  
+        &:hover {
+          transform: scale(1.1) rotate(3deg);
+        }
+      }
+  
+      p {
+        font-size: 1.1rem;
+        color: #333;
+        line-height: 1.6;
+  
+        &:nth-of-type(2) {
+          font-weight: bold;
+          margin-top: 1rem;
+          color: $primary-color;
+          font-size: 1.4rem;
+        }
+      }
+  
+      .btn-comprar {
+        display: inline-block;
+        background-color: $primary-color;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        letter-spacing: 1px;
+        margin-top: 1.5rem;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  
+        &:hover {
+          background-color: $secondary-color;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+  
