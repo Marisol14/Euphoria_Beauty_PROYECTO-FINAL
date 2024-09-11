@@ -10,3 +10,17 @@ Cambios realizados:
 6) Aplique bootstrap en el "footer". en los 5 html y un carrusel en el home.
 7) Se instalo Sass, mediante archivos json, para una instalacion mas provechosa.
 8) Aplique animaciones en las cards y en el logo de la barra de navegación 
+
+-----
+
+Euphoria-Beauty-ENTREGA-FINAL
+MARISOL ALCARAZ 
+Cambios realizados:
+
+1) AGREGUE HTML ADICIONALES PARA CADA CARD DE LOS PRODUCTOS, POR EJEMPLO LABIOS TIENE 3 HTML DE SUS PRODUCTOS CORRESPONDIENTES.
+
+2) MEJORE ANIMACIONES Y TRANSICIONES DE EFECTOS.
+
+3) AGREGUE EL FAVICON (NO TENIA NINGUNO AGREGADO)
+
+4) OPTIMIZE LOS ESTILOS DE CSS/SASS CON RESPECTO A LA ENTREGA ANTERIOR.
